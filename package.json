@@ -1,0 +1,41 @@
+{
+  "name": "rickroll-app",
+  "version": "1.0.0",
+  "description": "Rickroll application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "JustTim",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "fr.justtim.rickroll",
+    "productName": "Rickroll",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "img/icon.ico",
+      "img/rickroll.gif"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "img/icon.ico"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "img/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "img/icon.ico"
+    }
+  }
+}
